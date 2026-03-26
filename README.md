@@ -1,6 +1,6 @@
 # WithCAM: Multiscale Cerebral Blood Flow Solver
 
-MATLAB implementation of the CAM-incorporated 0D-1D coupled solver described in the manuscript： 
+MATLAB implementation of the CAM-incorporated 0D-1D coupled solver described in the manuscript:<br>
 "Multiscale modeling of blood circulation with cerebral autoregulation and network pathway analysis for hemodynamic redistribution in the vascular network with anatomical variations and stenosis conditions"
 
 ## Quick Start
