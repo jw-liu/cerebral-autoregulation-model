@@ -29,8 +29,8 @@ Running `main_WithCAM_coupled_solver.m` performs:
 | File | Description |
 | --- | --- |
 | `fig_WithCAM_baseline.png` | Baseline: WithCAM vs clinical data |
-| `fig_WithCAM_PCA.png` | PCA variant: WithCAM & WithoutCAM vs clinical data |
-| `fig_WithCAM_ACA.png` | ACA variant: WithCAM & WithoutCAM vs clinical data |
+| `fig_WithCAM_PCA.png` | PCA: WithCAM & WithoutCAM vs clinical data |
+| `fig_WithCAM_ACA.png` | ACA: WithCAM & WithoutCAM vs clinical data |
 
 ## Requirements
 
