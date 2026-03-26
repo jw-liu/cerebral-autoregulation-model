@@ -21,26 +21,11 @@ Running `main_WithCAM_coupled_solver.m` performs:
    - Condition 3: ACA (Missing anterior cerebral artery A1 segment)
 
 2. **Comparison figure generation**: three bar charts comparing model results against clinical statistics (with/without CAM vs [mean ± s.d.] from Zarrinkoob et al. (2015) )
-### Representative Results
-
 <p align="center">
   <img src="Figures/fig_WithCAM_baseline.png" width="250">
   <img src="Figures/fig_WithCAM_PCA.png" width="250">
   <img src="Figures/fig_WithCAM_ACA.png" width="250">
 </p>
-
-Comparison of WithCAM and WithoutCAM against clinical data across baseline, PCA, and ACA conditions.
-
-### Outputs
-
-| File | Description |
-| --- | --- |
-| `fig_WithCAM_baseline.png` | Baseline: WithCAM vs clinical data |
-| `fig_WithCAM_PCA.png` | PCA: WithCAM & WithoutCAM vs clinical data |
-| `fig_WithCAM_ACA.png` | ACA: WithCAM & WithoutCAM vs clinical data |
-
-
-
 
 ## Requirements
 
