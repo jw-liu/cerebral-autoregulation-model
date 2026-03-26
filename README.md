@@ -34,3 +34,5 @@ Running `main_WithCAM_coupled_solver.m` performs:
 
 - MATLAB R2018b or newer versions (base MATLAB only; no additional toolboxes required) 
 - No external data files beyond the three `.mat` input files included
+
+- ![demo](ArrowSt1Paths.gif)
