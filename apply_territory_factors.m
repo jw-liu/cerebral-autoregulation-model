@@ -1,11 +1,4 @@
 function Rmatrix_out = apply_territory_factors(Rmatrix, LineNodes, territory_lines, factors)
-%   Inputs:
-%     Rmatrix         - base resistance matrix
-%     LineNodes       - [L x 2] endpoint indices
-%     territory_lines - [6 x 1] line indices for the 6 terminal territories
-%     factors         - [6 x 1] scaling factors
-%   Output:
-%     Rmatrix_out - modified resistance matrix
 
 Rmatrix_out = Rmatrix;
 for T = 1:length(territory_lines)

@@ -1,14 +1,4 @@
 function P = build_boundary_conditions(node_heart, endNodes_ext, interNodes_ext, Pinlet_Cstep, alpha)
-%   Inputs:
-%     node_heart     - heart node index
-%     endNodes_ext   - all outlet node indices (cerebral + arm + body)
-%     interNodes_ext - all interior node indices
-%     Pinlet_Cstep   - [Nt x 2] inlet pressure waveform (column 2 used)
-%     alpha          - heart pressure scaling factor
-%
-%   Output:
-%     P - struct with fields: start, end, inter
-%         Each entry has .num (node index) and .value (time series)
 
 Nt = size(Pinlet_Cstep, 1);
 P = struct('start', [], 'end', [], 'inter', []);

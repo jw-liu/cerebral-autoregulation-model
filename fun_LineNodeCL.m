@@ -1,15 +1,7 @@
 function [Linedata, Nodedata, Nodenum, Linenum, NodeCL] = fun_LineNodeCL(Linedata, Nodedata)
-%   Matches vessel endpoints to node positions using spatial coordinates.
-%   Inputs/Outputs:
-%     Linedata - vessel segment struct array (modified in place)
-%     Nodedata - node struct array (modified in place)
-%     Nodenum  - total number of nodes
-%     Linenum  - total number of line segments
-%     NodeCL   - [Nodenum x 4] node-to-line connectivity matrix
 
-Nodenum= length(Nodedata); Linenum = length(Linedata);
-NodeCL= zeros(Nodenum, 4);
-Endspace1 = cell2mat(arrayfun(@(x) x.space(1,:),   Linedata, 'UniformOutput', false)');
+Nodenum= length(Nodedata); Linenum = length(Linedata); NodeCL= zeros(Nodenum, 4);
+Endspace1 = cell2mat(arrayfun(@(x) x.space(1,:),Linedata, 'UniformOutput', false)');
 Endspace2 = cell2mat(arrayfun(@(x) x.space(end,:), Linedata, 'UniformOutput', false)');
 
 for i = 1:Nodenum

@@ -1,14 +1,4 @@
 function Rmatrix_ext = build_condition_network(net, cal, c)
-%   Constructs the full extended cardio-cerebral resistance matrix (Fig.1c):
-%     Heart ---> Aorta (R_aorta) --R_up[i]--> RICA / RVA / LVA / LICA
-%                                --R_arm-->  Upper body (ground)
-%                                --R_body--> Trunk / lower body (ground)
-%   Inputs:
-%     net - network geometry struct (from initialize_model)
-%     cal - model parameters (R_aorta, R_up,R_arm, R_body)
-%     c   - condition index (1, 2, or 3)
-%   Output:
-%     Rmatrix_ext - [Nodenum_ext x Nodenum_ext] extended resistance matrix
 
 Rmatrix_ext = zeros(net.Nodenum_ext);
 Rmatrix_ext(1:net.Nodenum, 1:net.Nodenum) = net.Rmatrix_patho{c};

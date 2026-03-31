@@ -1,9 +1,6 @@
 function plot_condition_comparison(results, net, params, c, fname)
-%   Compares: clinical data (grey bars), WithoutCAM (green), WithCAM (red)
-%   Layout: [4 inlets | separator | 6 outlets]
 
 mu_exp  = params.exp_mu(c, :); sig_exp = params.exp_sig(c, :); sim_cam = results.cam_rel(c, :);
-
 if c == 1
     sim_nc = NaN(1, 10);
 else
@@ -12,11 +9,9 @@ end
 idx_s = net.idx_source; idx_k = net.idx_sink;
 
 if c == 2
-    % PCA: fetal-type P1 (PCAP1 absent)
     inlet_labels = {'ipsi-ICA', 'cont-ICA', 'ipsi-VA', 'cont-VA'};
     outlet_labels = {'ipsi-ACAA1', 'cont-ACA', 'ipsi-MCA', 'cont-MCA', 'ipsi-PCA', 'cont-PCA'};
 elseif c == 3
-    % ACA: hypoplastic A1 (ACAA1 absent)
     inlet_labels = {'ipsi-ICA', 'cont-ICA', 'ipsi-VA', 'cont-VA'};
     outlet_labels = {'hypoplastic ACAA1', 'cont-ACA', 'ipsi-MCA', 'cont-MCA', 'ipsi-PCA', 'cont-PCA'};
 else
@@ -40,7 +35,6 @@ elseif c == 2
 elseif c == 3
        ax = axes('Position', [0.10 0.27 0.85 0.66]);
 end
-
 bar(ax, 1:n, mu_plot, 'FaceColor', [0.6 0.6 0.6],'BarWidth', 0.65, 'EdgeColor', 'k', 'LineWidth', 1.2);
 hold on;
 errorbar(1:n, mu_plot, sig_plot, 'k', 'LineStyle', 'none', 'LineWidth', 2, 'CapSize', 8);

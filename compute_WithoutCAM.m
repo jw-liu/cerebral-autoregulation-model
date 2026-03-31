@@ -1,11 +1,4 @@
 function nocam_rel = compute_WithoutCAM(results, net)
-%   No Pressuresolution or CAM iteration is used, which represents the "WithoutCAM" model for comparison.
-%   Inputs:
-%     results - struct with results.Qdif{1} (baseline converged flow)
-%               and results.cam_rel (WithCAM relative flows)
-%     net     - network geometry struct (pv, line_idx_10, idx_source, idx_sink)
-%   Output:
-%     nocam_rel - [3 x 10] relative flow distribution (%) for each condition
 
 pv = net.pv; Q_base = mean(abs(results.Qdif{1}), 2);
 bv = struct(); fn = fieldnames(pv);
